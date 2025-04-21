@@ -1,0 +1,5 @@
+// lint-disable AD002
+== Heading One
+Some content
+== Heading Two
+No blank line here

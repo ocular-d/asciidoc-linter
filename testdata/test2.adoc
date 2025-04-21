@@ -1,0 +1,5 @@
+// lint-ignore AD001
+== Heading One
+Some content
+== Heading Two
+No blank line here

@@ -1,0 +1,61 @@
+# https://taskfile.dev
+
+version: '3'
+
+silent: true
+
+tasks:
+  homebrew:
+    desc: "Check if Homebrew is installed"
+    silent: true
+    internal: true
+    preconditions:
+      - sh: "command -v brew >> /dev/null"
+        msg: "Please install Homebrew"
+
+  golang:
+    desc: "Check if Golang is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+      - brew install go
+      - echo "Make sure to configure the $GOPATH"
+    status:
+      - command -v go >> /dev/null
+
+  cobra-cli:
+    desc: "Check if cobra-cli is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+      - brew install cobra-cli
+    status:
+      - command -v cobra-cli >> /dev/null
+
+  goreleaser:
+    desc: "Check if goreleaser is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+      - brew install goreleaser/tap/goreleaser
+    status:
+      - command -v goreleaser >> /dev/null
+
+  gofumpt:
+    desc: "Check if gofumpt is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+      - brew install gofumpt
+    status:
+      - command -v gofumpt >> /dev/null
+
+  repo-list:
+    desc: List repositories
+    cmds:
+      - gh repo list
+
+  pr-create:
+    desc: Create a Pull Request through the web
+    cmds:
+      - gh pr create --web

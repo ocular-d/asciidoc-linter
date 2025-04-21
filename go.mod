@@ -1,3 +1,3 @@
-module github.com/ocular-d/asciidoc-linter
+module github.com/ocular-d/asciidoclint
 
 go 1.24.2

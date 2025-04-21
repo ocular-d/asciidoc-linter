@@ -1,8 +1,8 @@
 package main
 
 import (
-    "github.com/ocular-d/asciidoc-linter/internal/linter"
-    "github.com/ocular-d/asciidoc-linter/rules"
+    "github.com/ocular-d/asciidoclint/internal/linter"
+    "github.com/ocular-d/asciidoclint/rules"
     "flag"
     "fmt"
 )
@@ -12,7 +12,7 @@ func main() {
     args := flag.Args()
 
     if len(args) == 0 {
-        fmt.Println("Usage: asciidoc-linter <file1.adoc> <file2.adoc> ...")
+        fmt.Println("Usage: asciidoclint <file1.adoc> <file2.adoc> ...")
         return
     }
 

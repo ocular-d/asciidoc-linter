@@ -1,8 +1,8 @@
 package linter
 
 import (
-    "github.com/ocular-d/asciidoc-linter/internal/linter/ignore"
-    "github.com/ocular-d/asciidoc-linter/rules"
+    "github.com/ocular-d/asciidoclint/internal/linter/ignore"
+    "github.com/ocular-d/asciidoclint/rules"
     "fmt"
     "os"
     "strings"
